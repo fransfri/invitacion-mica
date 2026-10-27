@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <meta name="description" content="Una invitacion especial para celebrar el cumpleanos de Mica." />
+    <title>El cumple de Mica</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="#inicio" aria-label="El cumple de Mica, inicio">M<span>.</span></a>
+      <p class="camera-model">MICA CAM <span>DSC-01</span></p>
+      <div class="camera-status"><span>STBY</span><span class="battery-icon" aria-label="Bateria completa"><i></i></span><span>100%</span></div>
+    </header>
+
+    <nav class="camera-nav" aria-label="Menu de la invitacion">
+      <a href="#inicio" aria-current="page"><span>01</span> VISOR</a>
+      <a href="#detalles"><span>02</span> EVENTO</a>
+      <a href="#confirmar"><span>03</span> RSVP</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-image-wrap">
+          <div class="viewfinder-readout"><span><i class="play-icon"></i> PLAY</span><span>AF-S</span><span>ISO AUTO</span></div>
+          <img class="hero-image" src="mica-photo-web.jpg" alt="Mica sonriendo con un ramo de flores" />
+          <span class="focus-brackets" aria-hidden="true"><i></i></span>
+          <div class="viewfinder-footer"><span>WB AUTO</span><span>FOTO 01 / 01</span></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> REPRODUCCION / 01</p>
+          <h1 id="hero-title"><span data-celebrant>Mica</span> cumple.<br /><em>Vos no podes faltar.</em></h1>
+          <p class="hero-intro">Un cumpleaños, la gente que quiero y una noche para guardar.</p>
+          <a class="round-link" href="#detalles"><span>Ver los detalles</span><b>OK <i aria-hidden="true">↵</i></b></a>
+          <p class="hero-footnote">PULSA OK PARA CONTINUAR</p>
+        </div>
+      </section>
+
+      <section class="details" id="detalles" aria-labelledby="details-title">
+        <div class="section-heading">
+          <p class="eyebrow">MENU / EVENTO 02</p>
+          <h2 id="details-title">Datos de la <em>celebracion</em></h2>
+        </div>
+        <div class="details-grid">
+          <article class="detail-item"><span class="detail-number">01</span><h3>Cuando</h3><p data-event-date>Fecha por definir</p><p class="detail-secondary" data-event-time>Hora por definir</p></article>
+          <article class="detail-item"><span class="detail-number">02</span><h3>Donde</h3><p><a data-event-venue>Lugar por definir</a></p><p class="detail-secondary" data-event-address>Direccion por definir</p></article>
+          <article class="detail-item detail-note"><span class="detail-number">03</span><h3>Un detalle</h3><p data-event-note>Ven con ganas de pasarla bien.</p><p class="detail-secondary">Tu presencia es el mejor regalo.</p></article>
+        </div>
+      </section>
+
+      <section class="rsvp" id="confirmar" aria-labelledby="rsvp-title">
+        <div class="rsvp-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> MENU / RSVP 03</p>
+          <h2 id="rsvp-title">¿Te sumas<br />a la <em>fiesta?</em></h2>
+          <p>Avísame antes del <span data-event-deadline>fecha por definir</span> para guardar tu lugar.</p>
+          <div class="rsvp-aside" aria-hidden="true"><span class="aside-line"></span><span>VA A ESTAR<br />BUENISIMO</span></div>
+        </div>
+        <form class="rsvp-form" id="rsvp-form">
+          <label class="field"><span>Tu nombre *</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Como te llamas" /></label>
+          <label class="field"><span>Correo electronico</span><input name="email" type="email" autocomplete="email" maxlength="160" placeholder="tu@correo.com" /></label>
+          <div class="form-row">
+            <label class="field"><span>Personas que vienen *</span><select name="guests" required><option value="1">1 persona</option><option value="2">2 personas</option><option value="3">3 personas</option><option value="4">4 personas</option><option value="5">5 personas</option></select></label>
+            <label class="field"><span>Restricciones alimentarias</span><input name="dietary" maxlength="160" placeholder="Opcional" /></label>
+          </div>
+          <label class="field"><span>Un mensajito para <span data-celebrant>Mica</span></span><textarea name="message" rows="2" maxlength="500" placeholder="Opcional"></textarea></label>
+          <button class="submit-button" type="submit"><span>Confirmar asistencia</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-privacy">Tu respuesta solo se usa para organizar la celebracion.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="wordmark" href="#inicio" aria-label="Volver al inicio">M<span>.</span></a>
+      <p><span class="keycap">MENU</span> CON CARINO, <span class="footer-name" data-celebrant>Mica</span></p>
+      <a href="#inicio"><span class="keycap">BACK</span> VOLVER AL VISOR</a>
+    </footer>
+  </body>
+</html>
